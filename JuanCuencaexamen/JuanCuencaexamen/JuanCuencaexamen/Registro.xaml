@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JuanCuencaexamen.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Grid.Row="0" Grid.Column="0" Text="{Binding dto.usuario} " />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>                   
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>                  
+                    <ColumnDefinition Width="Auto" />                  
+
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Nombre" />               
+                <Entry x:Name="txtNombre"   Grid.Row="0" Grid.Column="1" Text="" />
+                
+                <Label Grid.Row="1" Grid.Column="0" Text="Cutoa I." />
+                <Entry x:Name="txtCuotaInicial"   Grid.Row="1" Grid.Column="1" Text="" Keyboard="Numeric" />
+                
+                <Label Grid.Row="2" Grid.Column="0" Text="Cutoa Mens." />
+                <Entry x:Name="txtCuotaMensual" IsEnabled="False"  Grid.Row="2" Grid.Column="1" Text="" />
+                <Button Grid.Row="2" Grid.Column="2" x:Name="btnCalcular" Text="Calcular" Clicked="btnCalcular_Clicked" />
+
+            </Grid>
+            <Button Grid.Row="3" Grid.Column="0" x:Name="btnResumen" Text="Resumen" Clicked="btnResumen_Clicked" />
+            
+         
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
